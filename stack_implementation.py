@@ -34,13 +34,23 @@ with open(sys.argv[1], 'r') as test_cases:
             push(n)
         #iterate over every number in toadd list and push them into the stack
         for i in range(0, len(array)//2+1):
-            #Makes i equal to a value from i = 0 to i = 
+            #Makes i equal to a value from i = 0 to the length of the stack(array) divided
+            #by two because we are about to pop two at the time 1 for the new array and
+            #other one just to drop it, the +1 is for secure if the stack(array) is not even
             if array != []:
+                #the comprobation if the stack(array) is not empty
                 final.append(str(array.pop()))
+                #put in final the first pop
                 if array != []:
+                    #same comprobation than before if the last pop was the last
+                    #item in the stack(array)
                     array.pop()
+                    #drop the next item in stack(array)
                 else:
                     break
+                    #get out of the for iteration in case stack is empty
             else:
                 break
+                #get out of the for iteration in case stack is empty
         print" ".join(final)
+        #print the items in final with an empty space separation
