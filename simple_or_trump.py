@@ -22,13 +22,8 @@ with open(sys.argv[1], 'r') as test_cases:
             cardlist.append(card2)
         if cardlist == []:
             if dicti[card1[0:-1]] == dicti[card2[0:-1]]:
-                if card1[-1] == typecard:
-                    cardlist2.append(card1)
-                if card2[-1] == typecard:
-                    cardlist2.append(card2)
-                if card2[-1] != typecard and card1[-1] != typecard:
-                    cardlist2.append(card1)
-                    cardlist2.append(card2)
+                cardlist2.append(card1)
+                cardlist2.append(card2)
             else:
                 if dicti[card1[0:-1]] > dicti[card2[0:-1]]:
                     cardlist2.append(card1)
