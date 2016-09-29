@@ -1,3 +1,2 @@
-= Here the images
 
 gherkin::./simple.feature[]
